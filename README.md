@@ -1,2 +1,2 @@
 # Kalmat
-My first normal site on BottStrap 4
+My first normal site on BootStrap 4
