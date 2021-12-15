@@ -6,10 +6,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<meta charset="UTF-8">
 	<title>Kalmat</title>
+	<style>
+		li{
+			list-style-type: none;
+			margin-left: 10px;
+		}
+	</style>
 </head>
 <body>
 	
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark ">
 		<a href="#" class="navbar-brand mb-0 h1">Kalmat</a>
 		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<span class="navbar-toggler-icon"></span>
@@ -37,6 +43,21 @@
 						<button class="btn btn-outline-secondary my-2 my-sm-0">Search</button>
 					</form>
 				</ul>
+				<li class="nav-item">
+					<button class="btn btn-secondary switch-btn">Switch Theme</button>
+				</li>
+				<script>
+					let header = document.querySelector('nav');
+					let body = document.querySelector('body');
+					let themeButton = document.querySelector('.switch-btn');
+					themeButton.onclick = function () {
+  							header.classList.toggle('bg-dark');
+  							body.classList.toggle('bg-dark');
+  							body.css({
+  								color: "white"
+  							})
+					};
+				</script>
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a href="" class="nav-link active disabled">WhatsUp - +7 708 493 59 67</a>
